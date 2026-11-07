@@ -82,7 +82,7 @@ const Layout = {
     <div class="flagbar"></div>
     <div class="ticker"><div class="ticker-in">${tk}${tk}</div></div>
     <header class="header" id="hdr"><div class="container">
-      <a href="index.html" class="brand"><img src="images/logo.svg" alt="সুস্থ হবো লোগো"><span><b>সুস্থ হবো</b><small>সঠিক চিকিৎসা • জরুরি রক্ত • সহযোগিতা</small></span></a>
+      <a href="index.html" class="brand"><img src="logo.svg" alt="সুস্থ হবো লোগো"><span><b>সুস্থ হবো</b><small>সঠিক চিকিৎসা • জরুরি রক্ত • সহযোগিতা</small></span></a>
       <nav class="nav">
         <a href="index.html" class="${active==='home'?'on':''}">🏠 হোম</a>
         ${main.map(s => `<a href="${s.k}.html" class="${s.red?'red ':''}${active===s.k?'on':''}">${s.i} ${s.t}</a>`).join('')}
@@ -112,7 +112,7 @@ const Layout = {
     $('#site-footer').innerHTML = `
     <footer class="footer"><div class="container">
       <div class="cols">
-        <div><a href="index.html" class="brand"><img src="images/logo.svg" alt="" style="width:50px;height:50px"><span><b>সুস্থ হবো</b></span></a>
+        <div><a href="index.html" class="brand"><img src="logo.svg" alt="" style="width:50px;height:50px"><span><b>সুস্থ হবো</b></span></a>
           <p>সঠিক ডাক্তার, সঠিক হাসপাতাল, জরুরি রক্ত ও চিকিৎসা সহযোগিতা — বাংলাদেশের প্রতিটি মানুষের জন্য, সম্পূর্ণ বাংলায়।</p>
           <div class="soc"><a href="${so.facebook}" target="_blank" rel="noopener" aria-label="Facebook">📘</a><a href="${so.youtube}" target="_blank" rel="noopener" aria-label="YouTube">▶️</a><a href="${so.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a><a href="mailto:${so.email}" aria-label="Email">✉️</a></div></div>
         <div><h4>সেবা</h4>${['doctors','hospitals','tests','ai','appointment'].map(k => { const s = SERVICES.find(x => x.k === k); return `<a href="${k}.html">${s.t}</a>`; }).join('')}</div>
